@@ -1,0 +1,74 @@
+$primary-color: #4a90e2;
+$secondary-color: #f5f7fa;
+$accent-color: #50e3c2;
+$text-color: #333;
+$error-color: #e74c3c;
+$success-color: #2ecc71;
+$border-radius: 8px;
+$transition-speed: 0.3s;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin card-shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: $secondary-color;
+  color: $text-color;
+  line-height: 1.6;
+  min-height: 100vh;
+  width: 100%;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.loading {
+  @include flex-center;
+  min-height: 100vh;
+  font-size: 1.5rem;
+  color: $primary-color;
+  font-weight: 600;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: $border-radius;
+  transition: all $transition-speed;
+  font-weight: 600;
+  
+  &:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: $border-radius;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  
+  &:focus {
+    border-color: $primary-color;
+    outline: none;
+  }
+}

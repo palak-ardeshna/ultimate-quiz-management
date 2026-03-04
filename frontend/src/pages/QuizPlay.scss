@@ -1,0 +1,99 @@
+@import "../styles/main.scss";
+
+.quiz-play-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: $border-radius;
+  @include card-shadow;
+}
+
+.quiz-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid $secondary-color;
+
+  .timer {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: $primary-color;
+    padding: 8px 16px;
+    background: rgba($primary-color, 0.1);
+    border-radius: 20px;
+  }
+}
+
+.question-card {
+  h3 {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+  }
+
+  .options-grid {
+    display: grid;
+    gap: 15px;
+  }
+
+  .option-btn {
+    text-align: left;
+    padding: 15px 20px;
+    background: $secondary-color;
+    border: 2px solid transparent;
+    font-weight: 500;
+    font-size: 1rem;
+
+    &:hover {
+      background: #eef2f7;
+      transform: none;
+    }
+
+    &.selected {
+      background: rgba($primary-color, 0.1);
+      border-color: $primary-color;
+    }
+  }
+}
+
+.quiz-footer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.submit-btn {
+  background-color: $success-color;
+  color: white;
+  padding: 12px 30px;
+}
+
+.result-card {
+  text-align: center;
+  padding: 40px;
+
+  h2 {
+    color: $primary-color;
+    margin-bottom: 20px;
+  }
+
+  .score-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: $primary-color;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 30px;
+
+    .score-val {
+      font-size: 2.5rem;
+      font-weight: 800;
+    }
+  }
+}
