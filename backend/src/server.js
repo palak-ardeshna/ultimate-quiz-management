@@ -16,6 +16,7 @@ const app = express();
 const allowedOrigins = [
   'http://localhost:5173',
   'https://ultimate-quiz-management.onrender.com',
+  'https://ultimate-quiz-management.vercel.app',
   process.env.FRONTEND_URL
 ].filter(Boolean);
 
