@@ -6,6 +6,9 @@
     "node": ">=18.0.0"
   },
   "scripts": {
+    "start": "npm run start-backend",
+    "dev": "npm run dev-backend",
+    "build": "npm run install-backend",
     "install-backend": "cd backend && npm install",
     "start-backend": "cd backend && npm start",
     "dev-backend": "cd backend && npm run dev",
